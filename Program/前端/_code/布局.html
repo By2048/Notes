@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            border: 1px solid blue;
+        }
+
+        ul li {
+            display: inline;
+        }
+
+        #main {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .vertical-container {
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>
+            <a href="default.asp">Home</a>
+        </li>
+        <li>
+            <a href="news.asp">News</a>
+        </li>
+        <li>
+            <a href="contact.asp">Contact</a>
+        </li>
+        <li>
+            <a href="about.asp">About</a>
+        </li>
+    </ul>
+
+    <div id="main">
+        设置块级元素的 width 可以防止它从左到右撑满整个容器。然后你就可以设置左右外边距为 auto 来使其水平居中。元素会占据你所指定的宽度，然后剩余的宽度会一分为二成为左右外边距。 唯一的问题是，当浏览器窗口比元素的宽度还要窄时，浏览器会显示一个水平滚动条来容纳页面。让我们再来改进下这个方案...
+    </div>
+
+    <div class="vertical-container">
+        <div>
+            CSS里总算是有了一种简单的垂直居中布局的方法了！
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+
+- 列出所有包
+  - `adb shell pm list packages`
+- 小米系统广告解决方案
+    - `adb shell pm uninstall --user 0 com.miui.systemAdSolution`
+- 小米广告分析
+    - `adb shell pm uninstall --user 0 com.miui.analytics`
+- 游戏中心服务
+    - `adb shell pm uninstall --user 0 com.xiaomi.gamecenter.sdk.service`
+- 搜狗输入法
+    - `adb shell pm uninstall --user 0 com.sohu.inputmethod.sogou.xiaomi`
+- 小米音乐
+    - `adb shell pm uninstall --user 0 com.miui.player`
+- 小米视频
+    - `adb shell pm uninstall --user 0 com.miui.video`
+- 相册
+    - `adb shell pm uninstall --user 0 com.miui.gallery`
+- 黄页
+    - `adb shell pm uninstall --user 0 com.miui.yellowpage`
+- 小米支付
+    - `adb shell pm uninstall --user 0 com.xiaomi.payment`
+- 小米钱包
+    - `adb shell pm uninstall --user 0 com.mipay.wallet`
+- 语音助手
+    - `adb shell pm uninstall --user 0 com.miui.voiceassist`
+- 悬浮球
+    - `adb shell pm uninstall --user 0 com.miui.touchassistant`
+- 服务反馈
+    - `adb shell pm uninstall --user 0 com.miui.miservice`
+- 邮箱
+    - `adb shell pm uninstall --user 0 com.android.email`
+- 主题
+    - `adb shell pm uninstall --user 0 com.android.thememanager`
+- 文件管理
+    - `adb shell pm uninstall --user 0 com.android.fileexplorer`
+- 快应用
+    - `adb shell pm uninstall --user 0 com.miui.hybrid`
+- 自动测试
+    - `adb shell pm uninstall --user 0 com.longcheertel.AutoTest`
+- bug反馈
+    - `adb shell pm uninstall --user 0 com.miui.bugreport`
+- 智能出行
+    - `adb shell pm uninstall --user 0 com.miui.smsextra`
+- 智能助理
+    - `adb shell pm uninstall --user 0 com.miui.personalassistant`
+- 装配测试
+    - `adb shell pm uninstall --user 0 com.longcheertel.midtest`
+    - `adb shell pm uninstall --user 0 com.longcheertel.cit`

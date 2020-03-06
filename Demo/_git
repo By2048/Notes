@@ -1,0 +1,19 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "github"]
+	url = https://github.com/By2048/server.git
+	fetch = +refs/heads/*:refs/remotes/github/*
+[branch "master"]
+	remote = github
+	merge = refs/heads/master
+[branch "release"]
+	remote = github
+	merge = refs/heads/release
+[user]
+	name = By2048
+	email = 1247079575@qq.com

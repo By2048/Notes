@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<!-- 
+    一个 3000px 的 div
+    其中包含5个图片（600，400）只显示一个图片其余隐藏
+    设置图片的 style="left :0px;" 
+    通过设置偏移量实现轮播图
+ -->
+
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <link rel="stylesheet" href="index_1.css" />
+</head>
+
+<body>
+    <div id="container">
+        <div id="list" style="left :0px;">
+            <!-- <img src="_image/00.jpg" alt="0" />                 -->
+            <img src="_image/1.jpg" alt="1" />
+            <img src="_image/2.jpg" alt="2" />
+            <img src="_image/3.jpg" alt="3" />
+            <img src="_image/4.jpg" alt="4" />
+            <img src="_image/5.jpg" alt="5" />
+            <!-- <img src="_image/00.jpg" alt="0" /> -->
+
+        </div>
+        <div id="buttons">
+            <span index="1" class="on"></span>
+            <span index="2"></span>
+            <span index="3"></span>
+            <span index="4"></span>
+            <span index="5"></span>
+        </div>
+        <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+        <a href="javascript:;" id="next" class="arrow">&gt;</a>
+        <!-- <a href="javascript:doSomething();">click me</a> -->
+        <script src="index_1.js"></script>
+
+    </div>
+
+</body>
+
+</html>

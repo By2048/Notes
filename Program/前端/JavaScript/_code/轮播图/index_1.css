@@ -1,0 +1,95 @@
+:root {
+    --img-width: 960px;
+    --img-height: 540px;
+    --total-width:4800px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    padding: 20px;
+    width: var(--img-width);
+    margin: 0 auto;
+}
+
+#container {
+    position: relative;
+    width: var(--img-width);
+    height: var(--img-height);
+    border: 3px solid #333;
+    overflow: hidden;
+}
+
+#list {
+    position: absolute;
+    z-index: 1;
+    width: var(--total-width);
+    height: var(--img-height);
+}
+
+#list img {
+    width: var(--img-width);
+    height: var(--img-height);
+    float: left;
+}
+
+#buttons {
+    position: absolute;
+    left: calc(var(--img-width)/2);
+    margin-left: -50px;
+    bottom: 20px;
+    z-index: 2;
+    height: 10px;
+    width: 100px;
+}
+
+#buttons span {
+    float: left;
+    margin-right: 5px;
+    width: 10px;
+    height: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #333;
+    cursor: pointer;
+}
+
+#buttons .on {
+    background: orangered;
+}
+
+.arrow {
+    position: absolute;
+    top: 180px;
+    z-index: 2;
+    display: none;
+    width: 40px;
+    height: 40px;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 39px;
+    text-align: center;
+    color: #fff;
+    background-color: RGBA(0, 0, 0, .3);
+    cursor: pointer;
+}
+
+.arrow:hover {
+    background-color: RGBA(0, 0, 0, .7);
+}
+
+#container:hover .arrow {
+    display: block;
+}
+
+#prev {
+    left: 20px;
+}
+
+#next {
+    right: 20px;
+}

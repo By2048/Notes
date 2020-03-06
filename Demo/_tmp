@@ -1,0 +1,92 @@
+
+
+
+
+
+
+
+(api) [deploy@s71 api]$ python manage.py showmigrations
+
+
+select * from mysql.user  where user='root';
+
+select current_user() from dual;
+
+show grants for root@'localhost';
+
+ALTER USER `acp`@`localhost` IDENTIFIED BY 'AAacp.53iq.comZZ';
+
+GRANT Alter, Alter Routine, Create, Create Routine, Create Temporary Tables, Create View, Delete, Drop, Event, Execute, Grant Option, Index, Insert, Lock Tables, References, Select, Show View, Trigger, Update ON `outsourcing_acp`.* TO `acp`@`localhost`;
+
+
+# zk_client = KazooClient(ZOOKEEPER)
+# zk_client.start()
+# if not zk_client.exists(ZK_SERVER):
+#     zk_client.create(path=ZK_SERVER, makepath=True, ephemeral=True)
+
+
+
+        "kazoo.protocol.connection": {"handlers": ["NO"], "propagate": False},
+        "kazoo.client": {"handlers": ["NO"], "propagate": False},
+
+    def _zookeeper():
+        for item in ZOOKEEPER.split(','):
+            host, port = item.split(':')
+            logging.info(f"  zookeeper {host}:{port}")
+            try:
+                zk = KazooClient(hosts=item, timeout=10)
+                zk.start()
+                if zk.connected:
+                    version = zk.server_version()
+                    logging.info(f"      version : {version}")
+                zk.stop()
+                zk.close()
+            except Exception as e:
+                logging.exception(e)
+                raise RuntimeError(f"校验zookeeper服务不通过 : {e}")
+
+
+        # if self and not self.zk_path:
+        #     self.zk_path = f"{ZK_DEVICE}/{self.device.mac}"
+        #     self.zk_client.start()
+        #     if not self.zk_client.exists(self.zk_path):
+        #         self.zk_client.create(path=self.zk_path, makepath=True, ephemeral=True)
+
+
+
+
+        # def init_sql():
+#     import redis
+#     from conf.service import redis_conn_pool
+#     db = redis.Redis(connection_pool=redis_conn_pool)
+#     size = db.dbsize()
+#     config.REDIS_DB_SIZE = size
+#     logging.info(f"3   init config.REDIS_DB_SIZE -> {size}")
+
+
+
+
+
+7z a Ubuntu.zip .\Ubuntu\*
+7z d Ubuntu.zip *.log
+
+
+7z a WinServer.zip .\WinServer\*
+7z d WinServer.zip *.log
+7z d WinServer.zip caches -r
+
+
+D:\7-Zip\7z.exe a V:\FreeNas.zip V:\FreeNAS\* -x!*.log
+
+
+D:\7-Zip\7z.exe d V:\FreeNas.zip *.log
+D:\7-Zip\7z.exe d V:\WinServer.zip caches -r
+
+D:\7-Zip\7z.exe a V:\Share.zip V:\Share\* -x!*.log -x!123
+
+
+
+
+add-apt-repository ppa:lazygit-team/release
+apt-get update
+apt-get install lazygit

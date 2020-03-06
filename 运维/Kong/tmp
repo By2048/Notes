@@ -1,0 +1,77 @@
+
+
+
+创建一个消费者
+您需要将凭证关联到现有的Consumer对象。要创建消费者，您可以执行以下请求：
+curl -d "username=user123&custom_id=SOME_CUSTOM_ID" http://kong:8001/consumers/
+
+
+
+
+OAuth 2.0身份验证
+	http and ip.addr == 192.168.0.9 and tcp.port == 5312
+	
+	
+API 配置 oAuth 认证	
+curl -X POST http://127.0.0.1:8001/apis/get_all_person/plugins \
+    --data "name=oauth2"  \
+    --data "config.scopes=email,phone,address" \
+    --data "config.mandatory_scope=true" \
+    --data "config.enable_authorization_code=true"
+
+
+添加开发者帐号
+curl -X POST http://127.0.0.1:8001/consumers/ \
+    --data "username=user_test" \
+    --data "custom_id=user_id"
+
+添加应用	
+curl -X POST http://127.0.0.1:8001/consumers/552cb631-d7b7-43fd-80dd-984252e823d2/oauth2 \
+	--data "name=My%20Test%20Application" \
+	--data "redirect_uri=https://httpbin.org/get"
+	
+	
+curl -X POST https://127.0.0.1:8443/oauth2/authorize \
+	-H "Host: 127.0.0.1:8001" \
+	--data "client_id=mQIIeIs906Fjf96fDXU8hBpSoxtkp5ot" \
+	--data "response_type=code" \
+	--data "scope=email" \
+	--data "authenticated_userid=user_id" \
+	--data "provision_key=8HdbJTk7ioMFYIS9i17KkH2eAw035LcX" \
+	--insecure
+
+
+	
+	
+
+
+
+
+curl -X POST \
+     --data 'name=ip-restriction' \
+     --data 'config.whitelist=172.17.0.1' \
+     http://127.0.0.1:8001/apis/personapi/plugins
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
