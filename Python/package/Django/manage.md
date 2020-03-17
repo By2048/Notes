@@ -15,6 +15,7 @@
 - `python manage.py shell` 测试diango中的方法
 - `python manage.py rebuild_index` 就可以建立索引文件了
 - `python manage.py validate` 检查模型有效性
+- `python manage.py showmigrations` 查看迁移文件
 
 > - `migrations` 相当一个你的数据库的一个版本控制系统
 > - `makemigrations` 命令负责保存你的模型变化到一个迁移文件 和 `commits` 很类似  
