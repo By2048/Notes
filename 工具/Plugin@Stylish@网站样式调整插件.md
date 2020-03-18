@@ -1,3 +1,101 @@
+
+# baidu
+
+```css
+/* 网址前缀 https://www.baidu.com */
+#content_right /*垃圾热点*/
+{
+    display: none !important;
+}
+```
+
+
+# csdn
+
+```css
+/* 该域上的网址 blog.csdn.net */
+
+/* 该域上的网址 blog.csdn.net */
+#csdn-toolbar, /* 顶部导航栏 */
+.blog_container_aside, /* 左边信息栏 */
+.recommend-right,  /* 右边信息栏 */
+.tool-box,   /* 右边按钮 */
+.csdn-side-toolbar, /* 底部按钮 */
+.recommend-box, /* 推荐文章 */
+.template-box,  /* 文章主题模板信息 */
+.comment-box,  /* 文章评论 */
+.article-copyright,  /* 文章版权信息 */
+.article-info-box, /* 文章其他信息（发布时间，作者，阅读数） */
+.postTime, /* 文章发布时间信息 */
+.person-messagebox, /* 底部作者信息 */
+.more-toolbox, /* 点赞收藏分享 */
+.blog-column-pay, /* 官方推送 */
+.t0 /* 文章底部推荐 */
+{
+    display: none !important;
+}
+
+.container#mainBox main /* 文章主体内容宽度修改 */
+{
+	position: absolute;
+	width: 1300px !important;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	margin: auto;
+}
+```
+
+# juejin
+```css
+/* 该域上的网址 juejin.im */
+.add, /*写文章按钮*/
+.suspension-panel /*底部悬浮反馈按钮*/
+{
+    display: none !important;
+}
+
+
+/* 该域上的网址 https://juejin.im/timeline */
+.add, /*写文章按钮*/
+.sidebar-block, /*右边推荐榜*/
+.suspension-panel /*底部悬浮反馈按钮*/
+{
+    display: none !important;
+}
+.timeline-entry-list /*文章列表宽度*/
+{
+    width: 960px !important;
+}
+
+/* 网址前缀 https://juejin.im/post/ */
+.comment-btn, /*评论按钮*/
+.share-title, /*分享标题*/
+.share-btn, /*分享按钮*/
+.author-block,  /*右边作者信息*/
+.wechat-banner, /*微信社区推荐*/
+.index-book-collect,  /*右边掘金小册推荐*/
+.app-download-sidebar-block, /*app下载*/
+.related-entry-sidebar-block /*相关文章推荐*/
+{
+    display: none !important;
+}
+.catalog-block {
+    position: absolute important;
+    top: 50px  important;
+}
+
+.sticky-block-box
+{
+    position: fixed;
+    top: 6.766999999999999rem;
+    width: inherit;
+    transition: top .2s;
+}
+```
+
+
 # zhihu
 
 ```css
@@ -34,73 +132,22 @@ header /* 首部导航栏 */
 
 ```
 
-# csdn
+
+# oschina
 
 ```css
-/* 该域上的网址 blog.csdn.net */
-#csdn-toolbar, /* 顶部导航栏 */
-.blog_container_aside, /* 左边信息栏 */
-.recommend-right,  /* 右边信息栏 */
-.tool-box,   /* 右边按钮 */
-.csdn-side-toolbar, /* 底部按钮 */
-.recommend-box, /* 推荐文章 */
-.template-box,  /* 文章主题模板信息 */
-.comment-box,  /* 文章评论 */
-.article-copyright,  /* 文章版权信息 */
-.article-info-box, /* 文章其他信息（发布时间，作者，阅读数） */
-.postTime, /* 文章发布时间信息 */
-.person-messagebox, /* 底部作者信息 */
-.more-toolbox, /* 点赞收藏分享 */
-.blog-column-pay, /* 官方推送 */
-.t0 /* 文章底部推荐 */
+/* 网址前缀 https://www.oschina.net/news */
+#headerNavMenu ,
+#commentsContainer ,
+.news-links,
+.source-info ,
+.wonderful-comments-wrap,
+#mainScreen > div > div > div > div.twelve.wide.widescreen.screen.twelve.wide.large.screen.twelve.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column > div.float-menu-content > div.article-detail > div.ui.basic.center.aligned.segment.action,
+#mainScreen > div > div > div > div.twelve.wide.widescreen.screen.twelve.wide.large.screen.twelve.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column > div.ui.basic.segment.article-list.article-footer-list,
+#mainScreen > div > div > div > div.four.wide.widescreen.screen.four.wide.large.screen.four.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column.sidebar.news-sidebar,
+#footer,
+#copyright
 {
-    display: none !important;
-}
-main /* 文章主体内容宽度修改 */
-{
-	position: absolute;
-	width: 1300px !important;
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	margin: auto;
-}
-```
-
-# juejin
-```css
-/* 该域上的网址 juejin.im */
-.add, /*写文章按钮*/
-.suspension-panel /*底部悬浮反馈按钮*/
-{
-    display: none !important;
-}
-
-/* 网址 https://juejin.im/timeline */
-.sidebar-block /*右边推荐榜*/
-{
-    display: none !important;
-}
-.timeline-entry-list /*文章列表宽度*/
-{
-    width: 960px !important;
-}
-
-/* 网址前缀 https://juejin.im/post/ */
-.comment-btn, /*评论按钮*/
-.share-title, /*分享标题*/
-.share-btn, /*分享按钮*/
-.author-block,  /*右边作者信息*/
-.wechat-banner, /*微信社区推荐*/
-.index-book-collect,  /*右边掘金小册推荐*/
-.app-download-sidebar-block, /*app下载*/
-.related-entry-sidebar-block /*相关文章推荐*/
-{
-    display: none !important;
-}
-.catalog-block {
-    position: absolute important;
-    top: 50px  important;
+	display: none !important;
 }
 ```
