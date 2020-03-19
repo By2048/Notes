@@ -128,7 +128,7 @@
                 ],
                 "domains": [],
                 "regexps": [],
-                "code": "/* 网址前缀 https://juejin.im/post/ */\n.comment-btn, /*评论按钮*/\n.share-title, /*分享标题*/\n.share-btn, /*分享按钮*/\n.author-block,  /*右边作者信息*/\n.wechat-banner, /*微信社区推荐*/\n.index-book-collect,  /*右边掘金小册推荐*/\n.app-download-sidebar-block, /*app下载*/\n.related-entry-sidebar-block /*相关文章推荐*/\n{\n    display: none !important;\n}\n.catalog-block {\n    position: absolute important;\n    top: 50px  important;\n}\n\n.sticky-block-box\n{\n    position: fixed;\n    top: 6.766999999999999rem;\n    width: inherit;\n    transition: top .2s;\n}"
+                "code": "/* 网址前缀 https://juejin.im/post/ */\n.comment-btn, /*评论按钮*/\n.share-title, /*分享标题*/\n.share-btn, /*分享按钮*/\n.author-block,  /*右边作者信息*/\n.wechat-banner, /*微信社区推荐*/\n.index-book-collect,  /*右边掘金小册推荐*/\n.app-download-sidebar-block, /*app下载*/\n.related-entry-sidebar-block, /*相关文章推荐*/\n.recommended-area, /* 相关推荐 */\n#comment-box, /* 评论 */\n.article-banner,  /* 掘金推广 */\n.footer-author-block /* 底部作者信息 */\n{\n    display: none !important;\n}\n.catalog-block {\n    position: absolute important;\n    top: 50px  important;\n}\n\n.sticky-block-box\n{\n    position: fixed;\n    top: 6.766999999999999rem;\n    width: inherit;\n    transition: top .2s;\n}"
             }
         ],
         "url": "http://userstyles.org/styles/159306",
