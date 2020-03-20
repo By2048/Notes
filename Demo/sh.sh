@@ -25,15 +25,14 @@ tail -f socket.log | grep 20323363FC59
 sed -n "/2CF4320F8E4C/"p socket.log
 
 
-lsof -i:8080
-
-
-strace -p 
+lsof -i:xxx
+strace -p xxx
 
 
 
 if [ ! -f /tmp/article.db ]; then cd echo yes; else echo no; fi
 
 
+ssh -vT git@github.com
 
 
