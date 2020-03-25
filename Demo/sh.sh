@@ -28,6 +28,8 @@ sed -n "/2CF4320F8E4C/"p socket.log
 lsof -i:xxx
 strace -p xxx
 
+netstat -anp|grep 80
+
 
 
 if [ ! -f /tmp/article.db ]; then cd echo yes; else echo no; fi
