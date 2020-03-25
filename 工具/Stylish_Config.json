@@ -8,7 +8,7 @@
                     "blog.csdn.net"
                 ],
                 "regexps": [],
-                "code": "\n/* 该域上的网址 blog.csdn.net */\n#csdn-toolbar, /* 顶部导航栏 */\n.blog_container_aside, /* 左边信息栏 */\n.recommend-right,  /* 右边信息栏 */\n.tool-box,   /* 右边按钮 */\n.csdn-side-toolbar, /* 底部按钮 */\n.recommend-box, /* 推荐文章 */\n.template-box,  /* 文章主题模板信息 */\n.comment-box,  /* 文章评论 */\n.article-copyright,  /* 文章版权信息 */\n.article-info-box, /* 文章其他信息（发布时间，作者，阅读数） */\n.postTime, /* 文章发布时间信息 */\n.person-messagebox, /* 底部作者信息 */\n.more-toolbox, /* 点赞收藏分享 */\n.blog-column-pay, /* 官方推送 */\n.t0 /* 文章底部推荐 */\n{\n    display: none !important;\n}\n\n\n.container#mainBox main /* 文章主体内容宽度修改 */\n{\n\tposition: absolute;\n\twidth: 1300px !important;\n\tleft: 0;\n\ttop: 0;\n\tright: 0;\n\tbottom: 0;\n\tmargin: auto;\n}"
+                "code": "\n/* 该域上的网址 blog.csdn.net */\n#csdn-toolbar, /* 顶部导航栏 */\n.blog_container_aside, /* 左边信息栏 */\n.recommend-right,  /* 右边信息栏 */\n.tool-box,   /* 右边按钮 */\n.csdn-side-toolbar, /* 底部按钮 */\n.recommend-box, /* 推荐文章 */\n.template-box,  /* 文章主题模板信息 */\n.comment-box,  /* 文章评论 */\n.article-copyright,  /* 文章版权信息 */\n.article-info-box, /* 文章其他信息（发布时间，作者，阅读数） */\n.postTime, /* 文章发布时间信息 */\n.person-messagebox, /* 底部作者信息 */\n.more-toolbox, /* 点赞收藏分享 */\n.blog-column-pay, /* 官方推送 */\n.t0, /* 文章底部推荐 */\n.signin  /* 去除登陆后复制 */\n{\n    display: none !important;\n}\n\n\n.container#mainBox main /* 文章主体内容宽度修改 */\n{\n\tposition: absolute;\n\twidth: 1300px !important;\n\tleft: 0;\n\ttop: 0;\n\tright: 0;\n\tbottom: 0;\n\tmargin: auto;\n}"
             }
         ],
         "url": "http://userstyles.org/styles/172390",
@@ -71,7 +71,7 @@
                 ],
                 "domains": [],
                 "regexps": [],
-                "code": "/* 网址前缀 https://www.oschina.net/news */\n#headerNavMenu ,\n#commentsContainer ,\n.news-links,\n.source-info ,\n.wonderful-comments-wrap,\n#mainScreen > div > div > div > div.twelve.wide.widescreen.screen.twelve.wide.large.screen.twelve.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column > div.float-menu-content > div.article-detail > div.ui.basic.center.aligned.segment.action,\n#mainScreen > div > div > div > div.twelve.wide.widescreen.screen.twelve.wide.large.screen.twelve.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column > div.ui.basic.segment.article-list.article-footer-list,\n#mainScreen > div > div > div > div.four.wide.widescreen.screen.four.wide.large.screen.four.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column.sidebar.news-sidebar,\n#footer,\n#copyright\n{\n\tdisplay: none !important;\n}\n"
+                "code": "/* 网址前缀 https://www.oschina.net/news */\n#headerNavMenu ,\n#commentsContainer ,\n.news-links,\n.source-info ,\n.wonderful-comments-wrap,\n#mainScreen > div > div > div > div.twelve.wide.widescreen.screen.twelve.wide.large.screen.twelve.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column > div.float-menu-content > div.article-detail > div.ui.basic.center.aligned.segment.action,\n#mainScreen > div > div > div > div.twelve.wide.widescreen.screen.twelve.wide.large.screen.twelve.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column > div.ui.basic.segment.article-list.article-footer-list,\n#mainScreen > div > div > div > div.four.wide.widescreen.screen.four.wide.large.screen.four.wide.computer.sixteen.wide.tablet.sixteen.wide.mobile.column.sidebar.news-sidebar,\n#footer,\n#copyright,\n.article-footer-list,\n.aligned,\n.articles-list\n{\n\tdisplay: none !important;\n}\n\n\n.news-main\n{\n\twidth: 100% !important;\n}"
             }
         ],
         "updateUrl": null,
@@ -128,7 +128,7 @@
                 ],
                 "domains": [],
                 "regexps": [],
-                "code": "/* 网址前缀 https://juejin.im/post/ */\n.comment-btn, /*评论按钮*/\n.share-title, /*分享标题*/\n.share-btn, /*分享按钮*/\n.author-block,  /*右边作者信息*/\n.wechat-banner, /*微信社区推荐*/\n.index-book-collect,  /*右边掘金小册推荐*/\n.app-download-sidebar-block, /*app下载*/\n.related-entry-sidebar-block, /*相关文章推荐*/\n.recommended-area, /* 相关推荐 */\n#comment-box, /* 评论 */\n.article-banner,  /* 掘金推广 */\n.footer-author-block /* 底部作者信息 */\n{\n    display: none !important;\n}\n.catalog-block {\n    position: absolute important;\n    top: 50px  important;\n}\n\n.sticky-block-box\n{\n    position: fixed;\n    top: 6.766999999999999rem;\n    width: inherit;\n    transition: top .2s;\n}"
+                "code": "/* 网址前缀 https://juejin.im/post/ */\n.comment-btn, /*评论按钮*/\n.share-title, /*分享标题*/\n.share-btn, /*分享按钮*/\n.author-block,  /*右边作者信息*/\n.wechat-banner, /*微信社区推荐*/\n.index-book-collect,  /*右边掘金小册推荐*/\n.app-download-sidebar-block, /*app下载*/\n.related-entry-sidebar-block, /*相关文章推荐*/\n.recommended-area, /* 相关推荐 */\n#comment-box, /* 评论 */\n.article-banner,  /* 掘金推广 */\n.footer-author-block, /* 底部作者信息 */\n.request-health-alert /* 请求错误提示 */\n{\n    display: none !important;\n}\n\n\n /* 文章列表滚动修复 */\n.catalog-block { \n    position: absolute important;\n    top: 50px  important;\n}\n.sticky-block-box\n{\n    position: fixed;\n    top: 6.766999999999999rem;\n    width: inherit;\n    transition: top .2s;\n}\n\n\n/* 收藏按钮高度调整 */\n.collect-popup\n{\n\theight: 40rem;\n}\n.collection-list\n{\n    height: 33rem !important;\n}\n\n\n\n"
             }
         ],
         "url": "http://userstyles.org/styles/159306",

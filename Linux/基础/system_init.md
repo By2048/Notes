@@ -6,7 +6,7 @@ apt update && apt upgrade -y
 
 ## 安装软件
 ```
-apt install -y 
+apt install -y \
     docker docker.io \
     htop glances tree lrzsz \
     supervisor \
