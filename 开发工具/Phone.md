@@ -1,6 +1,9 @@
 
 - 列出所有包
   - `adb shell pm list packages`
+
+--------------------------------------------------
+
 - 小米系统广告解决方案
     - `adb shell pm uninstall --user 0 com.miui.systemAdSolution`
 - 小米广告分析
@@ -46,3 +49,11 @@
 - 装配测试
     - `adb shell pm uninstall --user 0 com.longcheertel.midtest`
     - `adb shell pm uninstall --user 0 com.longcheertel.cit`
+
+-------------------------------------------------
+
+- 以下系统自带应用删除后必定无法正常开机
+    - `com.miui.cloudservice`  （小米云服务）
+    - `com.xiaomi.account`  （小米账户）
+    - `com.miui.cloudbackup`  （云备份）
+    - `com.xiaomi.market`  （应用市场）
