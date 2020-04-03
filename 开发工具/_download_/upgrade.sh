@@ -22,7 +22,6 @@ docker pull mysql
 docker stop mysql && docker rm mysql
 docker run -d --name mysql \
     -p 3306:3306 \
-    -p 33060:33060 \
     -v /root/docker/mysql:/var/lib/mysql \
     -e MYSQL_ROOT_PASSWORD=mysql-password-1100 \
     --restart=always \
