@@ -1,25 +1,15 @@
 
 <style>
-    .left {
-        float: left;
-        width: 49.5%;
-    }
-    
-    .right {
-        float: right;
-        width: 49.5%;
-    }
-        
-    .clear {
-        clear: both;
-    }
+    .left { float: left; width: 49.5%; }
+    .right { float: right; width: 49.5%; }
+    .clear { clear: both; }
 </style>
 
 <div class="left">
 
 ```
-
 # 1
+
 
 ## 2
 
@@ -28,7 +18,6 @@
 #### 4
 
 ##### 5
-
 ```
 
 </div>
@@ -43,9 +32,9 @@
 
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
--------------------------------------------------------------------------------------------------------------
+----------------------------------------------------
 
 <div class="left">
 
@@ -78,8 +67,8 @@ ____________
 
 <div class="right">
 
-1
-------------
+1 
+-----------
 
 2
 ************
@@ -102,10 +91,10 @@ ____________
     
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
 
----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------
 
 
 
@@ -149,10 +138,10 @@ ____________
 > 引用
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
 
------------------------------------------------
+----------------------------------------------------
 
 
 
@@ -207,9 +196,9 @@ ____________
 
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
----------------------------------------------------------------------------------------------------------
+----------------------------------------------------
 
 
 
@@ -275,14 +264,13 @@ def somefunc(param1='', param2=0):
 
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
-----------------------------------------------------------------------------------
-
-
+----------------------------------------------------
 
 
---------------------------------------------------------------------
+
+
 
 ```
 :--- 代表左对齐
@@ -329,6 +317,9 @@ def somefunc(param1='', param2=0):
 
 <div class="right">
 
+</br>
+</br>
+
 <style>
     #tb{
         background-color:blue;        
@@ -348,6 +339,19 @@ def somefunc(param1='', param2=0):
     </tr>
 </table>
 
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+</br>
+
 |                      |                |
 |----------------------|----------------|
 | Ctrl + Shift + P，F1 | 显示命令面板   |
@@ -359,7 +363,7 @@ def somefunc(param1='', param2=0):
 
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
 
 
@@ -383,7 +387,7 @@ _
 ```
 
 
------------------------------
+--------------------------------------------------------------------
 
 
 
@@ -409,6 +413,8 @@ sorted(student_tuples, key=lambda student: student[2])
 
 <div class="right">
 
+</br></br>
+
 <details open> <summary> <code>排序脚本</code> </summary>
 
 ```py
@@ -425,14 +431,14 @@ sorted(student_tuples, key=lambda student: student[2])
 
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
 
 
 
 
 
---------------------------------------------------------------
+--------------------------------------------------------------------
 
 
 <div class="left">
@@ -480,49 +486,76 @@ sorted(student_tuples, key=lambda student: student[2])
 
 1
 [Google](http://www.google.com/)
+<br>
+<br>
+<br>
 
 2
 [icon.png](./images/icon.png)
+<br>
+<br>
 
 3
 [Google](http://www.google.com/ "Google1234")
+<br>
+<br>
 
 4
 [Google][]
+<br>
+<br>
 
 5
 [Google]: http://www.google.com/ "Google"
+<br>
+<br>
 
 6
 <http://www.google.com/>
+<br>
+<br>
 
 7
 <123@email.com>
+<br>
+<br>
 
 8
 ![GitHub](https://avatars2.githubusercontent.com/u/3265208?v=3&s=100 "GitHub,Social Coding")
+<br>
+<br>
 
 9
 ![GitHub][github]
+<br>
+<br>
 
 10
-[github]: https://avatars2.githubusercontent.com/u/3265208?v=3&s=100 "GitHub,Social Coding"
+[github]:https://avatars2.githubusercontent.com/u/3265208?v=3&s=100 "GitHub,Social Coding"
+<br>
+<br>
 
 11
 <img src="https://avatars2.githubusercontent.com/u/3265208?v=3&s=100" alt="GitHub" title="GitHub,Social Coding" width="50" height="50" />
+<br>
+<br>
 
 </div>
 
-<div style="clear:both"></div>
+<div class="clear"></div>
 
 
 
---------------------------------------------------------------
+--------------------------------------------------------------------
 
 
 <span style="color:black; background-color:blue; font-size:30px;">
     MarkDown
 </span>
+
+
+--------------------------------------------------------------------
+
 
 
 ```html
@@ -546,5 +579,6 @@ sorted(student_tuples, key=lambda student: student[2])
 <div class="right">
 </div>
 
-<div style="clear:both"></div>
+<div class="clear">
+</div>
 ```
