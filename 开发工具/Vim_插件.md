@@ -41,8 +41,3 @@
 
 
 
-
-# SpaceVim和Vim共存
-`git clone https://github.com/SpaceVim/SpaceVim.git ~/.SpaceVim`
-
-`alias svim='vim -u ~/.SpaceVim/vimrc'`

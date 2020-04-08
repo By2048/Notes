@@ -3,9 +3,7 @@ apt upgrade -y
 apt autoremote
 
 
-
 pyenv update
-
 
 
 docker pull redis
@@ -38,6 +36,12 @@ docker run -d --name mongo  \
     mongo --auth 
 
 
-
 curl https://cht.sh/:cht.sh > /root/bin/hp
 chmod +x /root/bin/hp
+
+
+npm install -g npm
+
+
+curl -sLf https://spacevim.org/cn/install.sh | bash
+
