@@ -38,7 +38,7 @@ exec "$SHELL"
 | 显示所有可用命令 | `pyenv commands`                  |
 | 查看可安装版本   | `pyenv install -l`                |
 | 安装 / 卸载      | `pyenv install / uninstall 3.7.5` |
-| 创建虚拟环境     | `pyenv virtualenv 3.7.5 myenv`   |
+| 创建虚拟环境     | `pyenv virtualenv 3.7.5 myenv`    |
 |                  |                                   |
 
 

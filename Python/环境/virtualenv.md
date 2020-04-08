@@ -1,6 +1,3 @@
-
-
-
 - `安装`
     - `pip install virtualenv`
 - `创建虚拟环境` 
@@ -12,6 +9,5 @@
     - `Linux` -> `source {name}/bin/activate`
 - `退出虚拟环境`
     - `deactivate`
-
 - `Demo`
     - `PS D:\Python> D:\Python\3.8.1\Scripts\virtualenv.exe _python_ --python=D:\Python\3.8.1\python.exe`
