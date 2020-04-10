@@ -3,35 +3,33 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Note
-subtitle: Python Note
-description: Python Note Blog
-keywords:  Python, Note
+title: Blog
+subtitle: Python Blog
+description: Python Blog
+keywords:  Python, Blog
 author: AM
 language: zh-Hans
 timezone: Asia/Shanghai
 
 # URL
-
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
 url: http://yoursite.com
 root: /
-# permalink: :year/:month/:day/:title/
-permalink: :category/:title
+permalink: :category/:title/
 permalink_defaults:
 pretty_urls:
-  trailing_index: true # Set to false to remove trailing index.html from permalinks
+  trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
+  trailing_html: true # Set to false to remove trailing '.html' from permalinks
 
 # Directory
 source_dir: source
 public_dir: public
 tag_dir: tags
-category_dir: categories
 archive_dir: archives
-code_dir: code
+category_dir: categories
+code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-
 
 # Writing
 new_post_name: :title.md # File name of new posts
@@ -51,6 +49,8 @@ highlight:
   line_number: true
   auto_detect: false
   tab_replace: ''
+  wrap: true
+  hljs: false
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -93,25 +93,9 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: next-5.1.4
-# theme: 
+theme: next
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: ''
-
-feed:
-  type: atom
-  path: atom.xml
-  limit: 20
-
-search:
-  path: search.xml
-  field: post
-  format: raw
-  limit: 10000
-
-
-social:
-  GitHub: https://github.com/your-user-name
