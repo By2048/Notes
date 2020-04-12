@@ -1,8 +1,13 @@
+## ADB命令
 
+- 检测设备是否连接正常
+    - `adb devices`
 - 列出所有包
-  - `adb shell pm list packages`
+    - `adb shell pm list packages`
 
---------------------------------------------------
+
+
+## 卸载内置包
 
 - 小米系统广告解决方案
     - `adb shell pm uninstall --user 0 com.miui.systemAdSolution`
@@ -50,10 +55,37 @@
     - `adb shell pm uninstall --user 0 com.longcheertel.midtest`
     - `adb shell pm uninstall --user 0 com.longcheertel.cit`
 
--------------------------------------------------
+----------------------
 
 - 以下系统自带应用删除后必定无法正常开机
     - `com.miui.cloudservice`  （小米云服务）
     - `com.xiaomi.account`  （小米账户）
     - `com.miui.cloudbackup`  （云备份）
     - `com.xiaomi.market`  （应用市场）
+
+
+
+## 备份/恢复
+
+- 备份整个系统
+    - `adb backup`
+    - `adb backup [-f {backup.ab}] [-apk|-noapk] [-shared|-noshared] [-all] [-system|nosystem]`
+        - `-f`
+            - 用这个来选择备份文件存储位置，例如`-f backup.ab`
+        - `-apk|-noapk`
+            - 是否备份`apk`
+        - `-all`
+            - 备份所有应用
+        - `-shared|-noshared`
+            - 是否备份设备数据 默认是`-noshare`
+        - `-system|-nosystem`
+            - `-all`是否包含系统应用，默认的是`-system`
+- 恢复
+    `adb restore backup.ab`
+- 示例命令
+    - `adb backup -apk -shared -system -all -f backup.ab`
+    - `adb backup -apk -noshared -nosystem -all -f backup.ab`
+- 备份文件解压查看
+    - [工具链接](https://github.com/nelenkov/android-backup-extractor)
+    - `java.exe -jar abe.jar unpack backup.ab backup.tar`
+
