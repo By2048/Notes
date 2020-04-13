@@ -89,3 +89,11 @@
     - [工具链接](https://github.com/nelenkov/android-backup-extractor)
     - `java.exe -jar abe.jar unpack backup.ab backup.tar`
 
+
+
+## 示例命令
+
+```
+D:\Android\Adb\adb.exe backup -noapk -shared -f t:\phone\backup.ab
+D:\JDK\bin\java.exe -jar D:\Android\abe.jar unpack t:\phone\backup.ab t:\phone\backup.tar
+```
