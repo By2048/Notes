@@ -1,3 +1,176 @@
+## Vim_插件
+
+### `NERDTree 文件浏览`
+
+#### 快捷键
+- `h` `j` `k` `l` 移动光标定位 
+- `o` 打开关闭文件或者目录，如果是文件的话，光标出现在打开的文件中 
+- `go` 效果同上，不过光标保持在文件目录里，类似预览文件内容的功能 
+- `i` 和 `s` 可以水平分割或纵向分割窗口打开文件，前面加`g`类似`go`的功能 
+- `t` 在标签页中打开 
+- `T` 在后台标签页中打开 
+- `p` 到上层目录 
+- `P` 到根目录 
+- `K` 到同目录第一个节点 
+- `J` 到同目录最后一个节点 
+- `m` 显示文件系统菜单（添加、删除、移动操作） 
+- `?` 帮助 
+- `q` 关闭
+
+#### 配置说明
+| 参数                          | 说明                                                     |
+| ----------------------------- | -------------------------------------------------------- |
+| `loaded_nerd_tree`            | 不使用NerdTree脚本                                       |
+| `NERDChristmasTree`           | 让Tree把自己给装饰得多姿多彩漂亮点                       |
+| `NERDTreeAutoCenter`          | 控制当光标移动超过一定距离时，是否自动将焦点调整到屏中心 |
+| `NERDTreeAutoCenterThreshold` | 与NERDTreeAutoCenter配合使用                             |
+| `NERDTreeCaseSensitiveSort`   | 排序时是否大小写敏感                                     |
+| `NERDTreeChDirMode`           | 确定是否改变Vim的CWD                                     |
+| `NERDTreeHighlightCursorline` | 是否高亮显示光标所在行                                   |
+| `NERDTreeHijackNetrw`         | 是否使用:edit命令时打开第二NerdTree                      |
+| `NERDTreeIgnore`              | 默认的“无视”文件                                       |
+| `NERDTreeBookmarksFile`       | 指定书签文件                                             |
+| `NERDTreeMouseMode`           | 指定鼠标模式（1.双击打开；2.单目录双文件；3.单击打开）   |
+| `NERDTreeQuitOnOpen`          | 打开文件后是否关闭NerdTree窗口                           |
+| `NERDTreeShowBookmarks`       | 是否默认显示书签列表                                     |
+| `NERDTreeShowFiles`           | 是否默认显示文件                                         |
+| `NERDTreeShowHidden`          | 是否默认显示隐藏文件                                     |
+| `NERDTreeShowLineNumbers`     | 是否默认显示行号                                         |
+| `NERDTreeSortOrder`           | 排序规则                                                 |
+| `NERDTreeStatusline`          | 窗口状态栏                                               |
+| `NERDTreeWinPos`              | 窗口位置 left right                                      |
+| `NERDTreeWinSize`             | 窗口宽                                                   |
+
+
+
+
+
+# Vim
+
+## 配置
+
+```
+
+" git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+set nocompatible              " 去除VI一致性,必须要添加
+filetype off                  " 必须要添加
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'majutsushi/tagbar'
+Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Yggdroot/indentLine'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'ShowTrailingWhitespace'
+Plugin 'tell-k/vim-autopep8'
+Plugin 'ctrlpvim/ctrlp.vim'
+
+call vundle#end()            " 必须
+filetype plugin indent on    " 必须
+
+" :PluginList       - 列出所有已配置的插件
+" :PluginInstall     - 安装插件,追加 `!` 用以更新或使用 :PluginUpdate
+" :PluginSearch foo - 搜索 foo ; 追加 `!` 清除本地缓存
+" :PluginClean      - 清除未使用插件,需要确认; 追加 `!` 自动批准移除未使用插件
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+map <F2> :NERDTreeToggle <CR>
+" :NERDTreeFind
+"    Find the current file in the tree. If no tree exists for the current tab,
+"    or the file is not under the current root, then initialize a new tree where
+"    the root is the directory of the current file. -->
+map <F1> :NERDTreeFind <CR>
+let NERDTreeWinPos='left'
+let NERDTreeWinSize=30
+let NERDTreeIgnore=['\.pyc$', '\.swp', '\.swo', '\.vscode', '__pycache__']
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
+
+map <F3> :TagbarToggle<CR>
+let g:tagbar_width=30
+let g:tagbar_left=0
+
+map <F5> :CtrlP<CR>
+
+map <F11> :Autopep8<CR>
+let g:autopep8_disable_show_diff=1
+
+map <F12> :call RunPython()<CR>
+func! RunPython()
+    exec "W"
+    if &filetype == 'python'
+        exec "!time python3 %"
+    endif
+endfunc
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+" 禁止生成 swap 恢复文件
+set noswapfile
+
+" 行数字
+set number              
+
+" 当前行显示下划线
+" set cursorline          
+
+" 切换粘贴模式 F8
+set pastetoggle=<F8>    
+
+" 设置默认文件编码
+set encoding=utf-8
+
+" 定义tab所等同的空格长度
+set tabstop=4
+
+" set foldmethod=indent "代码折叠
+
+" 文件编码探测列表
+set fileencodings=utf-8,gb18030
+
+" 在插入模式按回车时 vim 会自动根据上一行的缩进级别缩进
+set autoindent
+
+" 将状态行显示在窗口底部倒数第二行
+" 移去状态行
+" set laststatus=2
+" set laststatus=0
+
+" 高亮第 80 列 代码宽度限制
+" set colorcolumn=80
+
+" 显示窗口比较小的时候折行展示
+set linebreak
+
+" 打开文件类型检测
+filetype on             
+ 
+" 打开语法高亮显示
+syntax on         
+
+```
+
+
+
+
 - 命令行模式（Command mode）
     - a i o进入插入模式
     - ：进入底行模式

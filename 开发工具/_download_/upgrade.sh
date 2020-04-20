@@ -42,6 +42,3 @@ chmod +x /root/bin/hp
 
 npm install -g npm
 
-
-curl -sLf https://spacevim.org/cn/install.sh | bash
-
