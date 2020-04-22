@@ -94,6 +94,9 @@
 ## 示例命令
 
 ```
-D:\Android\Adb\adb.exe backup -noapk -shared -f t:\phone\backup.ab
-D:\JDK\bin\java.exe -jar D:\Android\abe.jar unpack t:\phone\backup.ab t:\phone\backup.tar
+D:\Android\Adb\adb.exe backup -noapk -shared -f T:\Backup.ab
+D:\JDK\bin\java.exe -jar D:\Android\abe.jar unpack T:\Backup.ab T:\Backup.tar
+copy T:\Backup.tar R:\Phone\Backup.tar
+del T:\Backup.ab
+del T:\Backup.tar
 ```
