@@ -35,7 +35,7 @@
 - 清华
     - `https://pypi.tuna.tsinghua.edu.cn/simple`
 - 临时使用镜像源安装 
-    - `pip install -i tensorflow https://pypi.tuna.tsinghua.edu.cn/simple`
+    - `pip install tensorflow -i https://pypi.tuna.tsinghua.edu.cn/simple`
 
 修改环境
 
