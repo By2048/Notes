@@ -10,4 +10,5 @@
 - `退出虚拟环境`
     - `deactivate`
 - `Demo`
-    - `PS D:\Python> D:\Python\3.8.1\Scripts\virtualenv.exe _python_ --python=D:\Python\3.8.1\python.exe`
+    - `cd /d D:\Python`
+    - `D:\Python\3.9.0\Scripts\virtualenv.exe _3.9.0_ --python=D:\Python\3.9.0\python.exe`
