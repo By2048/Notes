@@ -1,4 +1,8 @@
 .ipynb_checkpoints
 .idea
 .vscode
+
+/私密/*
+/Demo/*
+
 Xxx.md
