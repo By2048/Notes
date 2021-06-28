@@ -1,0 +1,18 @@
+
+
+
+docker run -id --name tracker \
+    -p 22122:22122 \
+    --restart=always \
+    --net host \
+    -v /usr/local/server/fastdfs/tracker/data:/root/docker/fastdfs/tracker/data \
+    season/fastdfs tracker
+
+
+
+docker run -id --name storage \
+    --restart=always \
+    --net host \
+    -v /usr/local/server/fastdfs/data/storage:/root/docker/fastdfs/storage \
+    -e TRACKER_SERVER="172.31.28.212:22122" \
+    season/fastdfs storage
