@@ -1,11 +1,12 @@
-.ipynb_checkpoints
 
 .idea
 .vscode
-
-___
+.ipynb_checkpoints
 
 /私密/*
 /Demo/*
 
+*preview.md
+
 Xxx.md
+ToDo.md
