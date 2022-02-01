@@ -25,8 +25,10 @@ chsh -s /bin/zsh
 %c -> $PWD
 ```
 
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+ (~/.zshrc)中
 
-brew install autojump;
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions;
+plugins=(其他插件 zsh-syntax-highlighting)
+
 git clone git://github.com/zsh-users/zsh-syntax-highlighting $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 

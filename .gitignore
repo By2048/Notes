@@ -8,5 +8,8 @@
 
 *preview.md
 
+*/__pycache__/*
+*.pyc
+
 Xxx.md
 ToDo.md

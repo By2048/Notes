@@ -1,4 +1,8 @@
+
+## 搭建环境
+
 ```sh
+docker pull minio
 docker stop minio && docker rm minio
 
 docker run -d \
@@ -11,3 +15,6 @@ docker run -d \
     minio/minio \
     server /data
 ```
+
+## Python 使用
+

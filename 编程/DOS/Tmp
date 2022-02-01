@@ -1,0 +1,21 @@
+
+@REM @SetLocal
+
+@REM @Mode 80,8
+
+@CD  /d  C:\
+
+@Set time=%date:~0,4%-%date:~5,2%-%date:~8,2%
+@Set backup=C:\Windows\System32\tree.com
+@Set folder=P:\Disk\#\
+@Set disk=D E F P Q O T U
+
+setlocal enabledelayedexpansion
+For %%o In (%disk%) Do (    
+    set file=%folder%\%o%#%time%
+    echo !file!
+)
+
+C:\Windows\System32\tree.com D: /f > P:\Disk\#\D#%time%
+
+@EndLocal
